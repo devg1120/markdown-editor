@@ -6,7 +6,14 @@
     <MdEditorV3
       v-if="visible"
       v-model="text"
-      editor-id="vue-template"
+      editor-id="vue-template1"
+      language="en-US"
+      @on-drop="onDrop"
+    />
+    <MdEditorV3
+      v-if="visible"
+      v-model="text"
+      editor-id="vue-template2"
       language="en-US"
       @on-drop="onDrop"
     />
