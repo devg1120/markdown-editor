@@ -1,3 +1,9 @@
+
+これは<span style="color: red; ">赤文字</span>です
+
+これは<span style="color: red; background-color: yellow;">赤文字</span>です
+
+
 ## 1. md-editor-v3
 
 ![](https://img.shields.io/github/package-json/v/imzbf/md-editor-v3) ![](https://img.shields.io/npm/dm/md-editor-v3) ![](https://img.shields.io/bundlephobia/min/md-editor-v3) ![](https://img.shields.io/github/license/imzbf/md-editor-v3) ![](https://img.shields.io/badge/ssr-%3E1.6.0-brightgreen)
