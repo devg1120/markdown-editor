@@ -21,7 +21,8 @@ globalThis.__name = __name;
     base: '/',
     publicDir: resolvePath('dev/public'),
     server: {
-      port: 6100
+      port: 3000,
+      host: "0.0.0.0"
     },
     resolve: {
       alias: {
