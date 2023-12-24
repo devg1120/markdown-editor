@@ -215,33 +215,7 @@ export default defineComponent({
         >
           <MdCatalog editorId="md-prev" theme={props.theme} mdHeadingId={mdHeadingId} />
         </div>
-        <button
-          style={{
-            position: 'absolute',
-            left: '10px',
-            top: '10px',
-            zIndex: 1000000
-          }}
-          onClick={() => {
-            // editorRef.value?.toggleFullscreen();
-            // editorRef.value?.togglePageFullscreen();
-            // editorRef.value?.toggleCatalog();
-            // editorRef.value?.toggleHtmlPreview();
-            // editorRef.value?.togglePreview();
-            // editorRef.value?.triggerSave();
-            // editorRef.value?.insert((selectedText) => {
-            //   return {
-            //     targetValue: `@${selectedText}@`,
-            //     select: false,
-            //     deviationStart: 0,
-            //     deviationEnd: 0
-            //   };
-            // });
-            editorRef.value?.focus();
-          }}
-        >
-          1
-        </button>
+
         <div class="container">
           <MdEditor
             completions={completions.list}
@@ -253,7 +227,8 @@ export default defineComponent({
             // pageFullscreen
             // preview={false}
             // htmlPreview
-            language={props.lang}
+            //language={props.lang}
+            language="en-US"
             // toolbarsExclude={['github']}
             // noPrettier
             // tabWidth={4}

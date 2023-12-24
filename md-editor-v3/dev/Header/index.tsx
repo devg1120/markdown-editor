@@ -28,20 +28,23 @@ export default defineComponent({
       <header class="page-header">
         <section class="container">
           <p class="header-actions">
+	  <a>&nbsp; BgColor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             <button class="btn btn-header" onClick={() => props.onChange('light')}>
-              亮模式
+              ライトモード
             </button>
             <button class="btn btn-header" onClick={() => props.onChange('dark')}>
-              暗模式
+              ダークモード
             </button>
+	  <a>&nbsp; &nbsp;  &nbsp;  &nbsp;  Lang &nbsp;</a>
             <button class="btn btn-header" onClick={() => props.onLangChange('zh-CN')}>
-              中文
+             Chainese
             </button>
             <button class="btn btn-header" onClick={() => props.onLangChange('en-US')}>
-              英文
+             English             
             </button>
           </p>
           <p class="header-actions">
+	  <a>&nbsp; Preview &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
             <button
               class="btn btn-header"
               onClick={() => props.onPreviewChange('default')}
@@ -80,6 +83,7 @@ export default defineComponent({
             </button>
           </p>
           <p class="header-actions">
+	  <a>&nbsp; CodeTheme &nbsp;&nbsp;</a>
             <button
               class="btn btn-header"
               onClick={() => props.onCodeThemeChange('a11y')}
