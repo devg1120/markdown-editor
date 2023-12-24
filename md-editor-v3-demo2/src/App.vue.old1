@@ -1,0 +1,79 @@
+
+    <template >
+<!--
+  <MdEditor v-model="text" theme="dark" language="en-US" />
+  -->
+  <MdEditor v-model="md.text" :theme="md.theme" :language="md.language"  >
+  </MdEditor>
+</template>
+
+<script setup>
+import { ref , reactive } from 'vue';
+import { MdEditor , NormalToolbar} from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+
+import { config } from 'md-editor-v3';
+import { lineNumbers } from '@codemirror/view';
+
+import data from './data';
+//import data from './data2';
+
+
+config({
+  codeMirrorExtensions(_theme, extensions) {
+    return [...extensions, lineNumbers()];
+  }
+});
+
+
+//const text = ref('# Hello Editor');
+const text = ref(data);
+
+ const md = reactive({
+       //theme: "dark",
+       language: "en-US",
+      //text: '# Hello Editor'
+      text: data
+    });
+
+/*
+const toolbars = ['bold', '-', 0, '=', 'github'];
+
+const handler = () => {
+  console.log('NormalToolbar clicked!');
+};
+*/
+
+</script>
+
+<!--
+<template>
+  <MdEditor v-model="text" theme="dark" language="en-US" />
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import { MdEditor } from 'md-editor-v3';
+import 'md-editor-v3/lib/style.css';
+
+import { config } from 'md-editor-v3';
+import { lineNumbers } from '@codemirror/view';
+
+import data from './data';
+//import data from './data2';
+
+
+config({
+  codeMirrorExtensions(_theme, extensions) {
+    return [...extensions, lineNumbers()];
+  }
+});
+
+
+//const text = ref('# Hello Editor');
+const text = ref(data);
+
+
+</script>
+
+-->

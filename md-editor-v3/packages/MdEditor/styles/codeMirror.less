@@ -1,0 +1,74 @@
+.cm-editor {
+  font-size: 14px;
+  height: 100%;
+
+  &.cm-focused {
+    outline: none;
+  }
+
+  .cm-tooltip.cm-tooltip-autocomplete {
+    border-radius: 3px;
+
+    & > ul {
+      border-radius: 3px;
+      min-width: fit-content;
+      max-width: fit-content;
+
+      li {
+        background-color: var(--md-bk-color);
+        color: var(--md-color);
+        padding: 4px 10px;
+        line-height: 16px;
+
+        // 自动提示语的图标
+        .cm-completionIcon {
+          width: auto;
+        }
+      }
+
+      li[aria-selected] {
+        background-color: var(--md-bk-hover-color);
+      }
+    }
+
+    .cm-completionInfo {
+      margin-top: -2px;
+      margin-left: 3px;
+      padding: 4px 9px;
+      border-radius: 3px;
+      overflow: hidden;
+      // 因为它是跟随着选中项，所以默认选择背景
+      background-color: var(--md-bk-hover-color);
+      color: var(--md-color);
+    }
+  }
+}
+
+.has-preview {
+  .cm-scroller {
+    overflow-y: scroll;
+  }
+}
+
+.cm-scroller {
+  // 当没有代码行号的时候，给编辑区一个10的外间距
+  .cm-content[contenteditable='true'] {
+    margin: 10px;
+    min-height: calc(100% - 20px);
+  }
+
+  // 当有代码行号时，把外间距设置为默认值
+  .cm-gutters + .cm-content[contenteditable='true'] {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  .cm-line {
+    line-height: inherit;
+  }
+}
+
+.ͼ1 .cm-scroller {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  line-height: 20px;
+}

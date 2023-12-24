@@ -1,7 +1,10 @@
 <script setup>
   import { ref } from 'vue';
+  import data from './data';
 
-  const text = ref('');
+  //const text = ref('# HELLO');
+  const text = ref(data);
+  //const text = data;
 </script>
 
 <template>
