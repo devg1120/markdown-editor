@@ -40,15 +40,19 @@ export default defineComponent({
         />
         <div class="page-body">
           {/* <VueTemplate /> */}
+	  <h2>PreView</h2>
           <Preview
             theme={theme.value}
             previewTheme={previewTheme.value}
             codeTheme={codeTheme.value}
             lang={lang.value}
           />
-
+          <hr color="#ff0000"/>
+	  <h2>VueTemplate</h2>
           <VueTemplate />
 
+          <hr color="#ff0000"/>
+	  <h2>PreViewOnly</h2>
           <PreviewOnly
             theme={theme.value}
             previewTheme={previewTheme.value}
