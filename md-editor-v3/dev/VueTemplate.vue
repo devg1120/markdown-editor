@@ -3,13 +3,31 @@
     <div style="margin: 1em 0">
       <button @click="changeVisible">クリック</button>
     </div>
-    <MdEditorV3
-      v-if="visible"
-      v-model="text"
-      editor-id="vue-template1"
-      language="en-US"
-      @on-drop="onDrop"
-    />
+    <div v-if="visible">
+        <MdEditorV3
+            theme={props.theme}
+          v-model="text"
+          editor-id="vue-template1"
+          language="en-US"
+          @on-drop="onDrop"
+        />
+        <MdEditorV3
+          v-model="text"
+          editor-id="vue-template2"
+          language="en-US"
+          @on-drop="onDrop"
+        />
+    </div>
+    <div v-else>
+          <MdPreview
+	   style="width:80%"
+            previewTheme="default"
+            codeTheme="default"
+            v-model="text"
+          />
+
+    </div>
+    <!--
     <MdEditorV3
       v-if="visible"
       v-model="text"
@@ -17,6 +35,7 @@
       language="en-US"
       @on-drop="onDrop"
     />
+    -->
   </div>
 </template>
 

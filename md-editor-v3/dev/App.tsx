@@ -49,7 +49,10 @@ export default defineComponent({
           />
           <hr color="#ff0000"/>
 	  <h2>VueTemplate</h2>
-          <VueTemplate />
+          <VueTemplate 
+            theme={theme.value}
+
+	  />
 
           <hr color="#ff0000"/>
 	  <h2>PreViewOnly</h2>
