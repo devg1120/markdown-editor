@@ -1,6 +1,6 @@
 
 <template >
-  <MdEditor v-model="md.text" :theme="md.theme" :language="md.language" :toolbars="toolbars" >
+  <MdEditor editor-id="vue-template1" v-model="md.text" :theme="md.theme" :language="md.language" :toolbars="toolbars" >
     <template #defToolbars>
       <NormalToolbar title="mark" @onClick="handler">
         <template #trigger>
@@ -26,9 +26,7 @@
       </NormalToolbar>
     </template>
   </MdEditor>
-  <!--
-  <MdEditor v-model="md.text" :theme="md.theme" :language="md.language" />
-  -->
+  <MdEditor editor-id="vue-template2" v-model="md.text" :theme="md.theme" :language="md.language" />
 
 </template>
 
